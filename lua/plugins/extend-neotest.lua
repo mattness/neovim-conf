@@ -5,9 +5,6 @@ return {
   },
   {
     "nvim-neotest/neotest",
-    dependencies = {
-      "rcasia/neotest-bash",
-    },
     opts = {
       adapters = {
         ["neotest-bash"] = {},
