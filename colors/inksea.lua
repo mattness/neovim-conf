@@ -8,35 +8,7 @@ vim.o.termguicolors = true
 vim.g.colors_name = "inksea"
 
 -- Inksea Dark Palette
-local colors = {
-  -- Base colors
-  bg = "#1a1d21",
-  bg_dark = "#131518",
-  bg_highlight = "#31353a",
-  fg = "#c4cad1",
-  fg_dim = "#676B79",
-
-  -- Syntax colors
-  blue = "#6FC1FF",
-  cyan = "#45A9F9",
-  green = "#63e6be",
-  yellow = "#F6B352",
-  orange = "#FFCC95",
-  red = "#ef5285",
-  magenta = "#FF9AC1",
-  purple = "#B084EB",
-
-  -- UI colors
-  comment = "#676B79",
-  selection = "#2d2a21",
-  search = "#3a3025",
-  border = "#0a0b0f",
-
-  -- Git colors
-  git_add = "#63e6be",
-  git_change = "#6FC1FF",
-  git_delete = "#ef5285",
-}
+local colors = require("config.colors")
 
 -- Helper function to set highlights
 local function hl(group, opts)
@@ -53,8 +25,8 @@ hl("CursorLine", { bg = colors.bg_highlight })
 hl("CursorLineNr", { fg = colors.orange, bold = true })
 hl("LineNr", { fg = colors.fg_dim })
 hl("SignColumn", { bg = colors.bg })
-hl("StatusLine", { fg = colors.fg, bg = colors.bg_dark })
-hl("StatusLineNC", { fg = colors.fg_dim, bg = colors.bg_dark })
+hl("StatusLine", { fg = colors.fg, bg = colors.bg })
+hl("StatusLineNC", { fg = colors.fg_dim, bg = colors.bg })
 hl("VertSplit", { fg = colors.border })
 hl("WinSeparator", { fg = colors.border })
 hl("Pmenu", { fg = colors.fg, bg = colors.bg_dark })
